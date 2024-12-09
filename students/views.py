@@ -12,3 +12,7 @@ def submit_data(request):
     if request.method == 'POST':
         # Обработка данных формы
         return HttpResponse("Данные отправлены!")
+
+def show_item(request, item_id):
+    # Логика для обработки данных элемента с указанным ID
+    return render(request, 'app/item.html', {'item_id': item_id})
